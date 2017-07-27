@@ -15,8 +15,8 @@ import java.awt.event.ActionEvent;
 public class Login {
 
 	private JFrame frmLogin;
-	private JTextField textField;
-	private JPasswordField passwordField;
+	private JTextField txtUsername;
+	private JPasswordField txtPassword;
 
 	/**
 	 * Launch the application.
@@ -57,25 +57,27 @@ public class Login {
 		lblUsername.setBounds(10, 22, 73, 21);
 		frmLogin.getContentPane().add(lblUsername);
 		
-		textField = new JTextField();
-		textField.setBounds(100, 22, 163, 21);
-		frmLogin.getContentPane().add(textField);
-		textField.setColumns(10);
+		txtUsername = new JTextField();
+		txtUsername.setBounds(100, 22, 163, 21);
+		frmLogin.getContentPane().add(txtUsername);
+		txtUsername.setColumns(10);
 		
 		JLabel lblPassword = new JLabel("Password");
 		lblPassword.setFont(new Font("Tahoma", Font.PLAIN, 13));
 		lblPassword.setBounds(10, 54, 73, 21);
 		frmLogin.getContentPane().add(lblPassword);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBounds(100, 54, 163, 20);
-		frmLogin.getContentPane().add(passwordField);
+		txtPassword = new JPasswordField();
+		txtPassword.setBounds(100, 54, 163, 20);
+		frmLogin.getContentPane().add(txtPassword);
 		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				//write your code here
-				
+				if(txtUsername.equals("user") && txtPassword.equals("1234")){
+					//add something to do
+				}
 				
 			}
 		});
