@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
@@ -73,10 +75,14 @@ public class Login {
 		
 		JButton btnLogin = new JButton("Login");
 		btnLogin.addActionListener(new ActionListener() {
+			@SuppressWarnings("deprecation")
 			public void actionPerformed(ActionEvent arg0) {
 				//write your code here
-				if(txtUsername.equals("user") && txtPassword.equals("1234")){
-					//add something to do
+				if((txtUsername.getText().equals("user")) && (txtPassword.getText().equals("1234"))){
+					JOptionPane.showMessageDialog(null, "Correct Credentials");
+					frmLogin.dispose();
+					Frame2 obj = new Frame2();
+					obj.setVisible(true);
 				}
 				
 			}
